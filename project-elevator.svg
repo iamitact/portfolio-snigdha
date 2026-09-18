@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Diagram of a four-floor PLC elevator controller using a two-bit magnitude comparator">
+  <rect width="800" height="600" fill="#F1EDE4"/>
+
+  <!-- shaft -->
+  <g stroke="#152A40" fill="none" stroke-width="1.6">
+    <rect x="86" y="74" width="168" height="452"/>
+    <line x1="86" y1="187" x2="254" y2="187"/>
+    <line x1="86" y1="300" x2="254" y2="300"/>
+    <line x1="86" y1="413" x2="254" y2="413"/>
+  </g>
+
+  <!-- floor numbers -->
+  <g fill="#8E8E82" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2" text-anchor="end">
+    <text x="70" y="136">4</text>
+    <text x="70" y="249">3</text>
+    <text x="70" y="362">2</text>
+    <text x="70" y="475">1</text>
+  </g>
+
+  <!-- car at 3rd floor -->
+  <rect x="104" y="205" width="132" height="82" fill="#152A40"/>
+  <line x1="170" y1="205" x2="170" y2="287" stroke="#F1EDE4" stroke-width="1.4"/>
+  <circle cx="145" cy="246" r="3" fill="#F1EDE4"/>
+  <circle cx="195" cy="246" r="3" fill="#F1EDE4"/>
+
+  <!-- travel arrow -->
+  <g stroke="#A35318" stroke-width="1.6" fill="none">
+    <line x1="170" y1="195" x2="170" y2="122"/>
+    <polyline points="158,134 170,120 182,134"/>
+  </g>
+
+  <!-- wires from shaft to logic block -->
+  <g stroke="#C9C2B4" stroke-width="1.2" fill="none">
+    <path d="M254 246 H310 V210 H360"/>
+    <path d="M254 340 H286 V300 H360"/>
+  </g>
+
+  <!-- inputs -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.6">
+    <rect x="360" y="188" width="128" height="44" fill="#FFFFFF" stroke="#152A40" stroke-width="1.4"/>
+    <text x="374" y="206" fill="#8E8E82" font-size="10">BUTTON  Q1Q2</text>
+    <text x="374" y="223" fill="#152A40" font-size="15" letter-spacing="4">1 0</text>
+
+    <rect x="360" y="278" width="128" height="44" fill="#FFFFFF" stroke="#152A40" stroke-width="1.4"/>
+    <text x="374" y="296" fill="#8E8E82" font-size="10">POSITION  Q3Q4</text>
+    <text x="374" y="313" fill="#152A40" font-size="15" letter-spacing="4">0 1</text>
+  </g>
+
+  <!-- comparator -->
+  <g stroke="#152A40" stroke-width="1.4" fill="none">
+    <line x1="488" y1="210" x2="524" y2="210"/>
+    <line x1="488" y1="300" x2="524" y2="300"/>
+    <path d="M524 176 L604 220 L604 290 L524 334 Z" fill="#FFFFFF"/>
+  </g>
+  <text x="564" y="250" fill="#152A40" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle">COMPARE</text>
+  <text x="564" y="268" fill="#8E8E82" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="1.2" text-anchor="middle">2-BIT</text>
+
+  <!-- outputs -->
+  <g stroke="#152A40" stroke-width="1.4" fill="none">
+    <path d="M604 232 H638 V168 H664"/>
+    <path d="M604 255 H650 V255 H664"/>
+    <path d="M604 278 H638 V342 H664"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.8">
+    <circle cx="678" cy="168" r="8" fill="#A35318"/>
+    <text x="696" y="173" fill="#152A40">UP · Q5</text>
+
+    <circle cx="678" cy="255" r="8" fill="none" stroke="#C9C2B4" stroke-width="1.4"/>
+    <text x="696" y="260" fill="#8E8E82">DOWN · Q6</text>
+
+    <circle cx="678" cy="342" r="8" fill="none" stroke="#C9C2B4" stroke-width="1.4"/>
+    <text x="696" y="347" fill="#8E8E82">STOP · Q7</text>
+  </g>
+
+  <!-- overload override -->
+  <g stroke="#A35318" stroke-width="1.3" fill="none" stroke-dasharray="5 4">
+    <path d="M420 430 H678 V360"/>
+  </g>
+  <rect x="300" y="412" width="120" height="36" fill="#FFFFFF" stroke="#A35318" stroke-width="1.4"/>
+  <text x="360" y="435" fill="#A35318" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle">OVERLOAD I10</text>
+
+  <!-- caption rule -->
+  <line x1="86" y1="556" x2="714" y2="556" stroke="#D8D2C6" stroke-width="1"/>
+  <text x="86" y="580" fill="#8E8E82" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="2.4">FOUR-FLOOR PLC ELEVATOR CONTROLLER</text>
+</svg>
